@@ -1,0 +1,88 @@
+// list of elements
+// if argument is `false` try to calculate it
+@mixin sata-list-dimensions($outer-width: false, $inner-width: false, $element-width: false, $element-margin: false, $count-in-row: false) {
+  $continue: false;
+  @if length(compact($element-width, $element-margin, $count-in-row)) == 3 {
+    $continue: true;
+  } @else if length(compact($element-width, $element-margin, $count-in-row)) == 2 and length(compact($outer-width, $inner-width)) > 0 {
+    $continue: true;
+  }
+  @if not $continue {
+    @warn "Wrong calculate arguments";
+  }
+
+  @if not $element-margin {
+    @if $inner-width {
+      $element-margin: floor(($inner-width / $count-in-row - $element-width) / 2);
+    } @else {
+      $element-margin: floor(($outer-width - $element-width * $count-in-row) / (2 * ($count-in-row - 1)));
+    }
+  }
+
+  @if not $outer-width and not $inner-width {
+    $inner-width: ($element-width + 2 * $element-margin) * $count-in-row;
+  }
+
+  @if not $outer-width {
+    $outer-width: $inner-width - 2 * $element-margin;
+  }
+
+  @if not $inner-width {
+    $inner-width: $outer-width + 2 * $element-margin;
+  }
+
+  @if not $element-width {
+    $element-width: floor($inner-width / $count-in-row - 2 * $element-margin);
+  }
+
+  width: $outer-width;
+  > ul {
+    width: $inner-width;
+    margin-left: -$element-margin;
+    > li {
+      width: $element-width;
+      margin-left: $element-margin;
+      margin-right: $element-margin;
+    }
+  }
+}
+
+@mixin sata-list($outer-width: false, $inner-width: false, $element-width: false, $element-margin: false, $count-in-row: false) {
+  overflow: hidden;
+  > ul {
+    @include reset-box-model;
+    @include pie-clearfix;
+    > li {
+      @include no-bullet;
+      float: left;
+    }
+  }
+  @include sata-list-dimensions($outer-width, $inner-width, $element-width, $element-margin, $count-in-row);
+}
+
+@mixin sata-inline-list($font-size, $min-height:false, $outer-width: false, $inner-width: false, $element-width: false, $element-margin: false, $count-in-row: false) {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -1px;
+  > ul {
+    @include reset-box-model;
+    @include pie-clearfix;
+    > li {
+      @include no-bullet;
+      @if $min-height {
+        min-height: $min-height;
+        _height: $min-height;
+      }
+      font-size: $font-size;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline;
+      line-height:normal;
+      letter-spacing:normal;
+    }
+  }
+  @include sata-list-dimensions($outer-width, $inner-width, $element-width, $element-margin, $count-in-row);
+}
