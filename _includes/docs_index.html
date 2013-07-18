@@ -1,0 +1,18 @@
+<ul>
+	<li class="title">
+		Utils
+	</li>
+	{% for post in site.categories.utils %}
+		{% if post.categories contains page.lang and post.categories contains 'docs' %}
+			{% include docs_index_item.html %}
+		{% endif %}
+	{% endfor %}
+	<li class="title">
+		Lists
+	</li>
+	{% for post in site.categories.lists %}
+		{% if post.categories contains page.lang and post.categories contains 'docs' %}
+			{% include docs_index_item.html %}
+		{% endif %}
+	{% endfor %}
+</ul>

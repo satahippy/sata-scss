@@ -1,0 +1,38 @@
+---
+layout: docs-item
+lang: ru
+title:  "sata-image"
+syntax: "sata-image($image, $display: false)"
+excerpt: "<p>Устанавливает фон(изображение), высоту и ширину элемента.</p>"
+related:
+  en: /en/docs/utils/sata-image.html
+  ru: /ru/docs/utils/sata-image.html
+---
+<div class="docs-item">
+	<p class="syntax">
+		{{page.syntax}}
+	</p>
+	{{page.excerpt}}
+	<p>
+		$image - url изображения
+		<br/>
+		$display - css свойство display (если false, свойство не устанавливается)
+	</p>
+	<h1>Примеры</h1>
+	<h2>Показываем изображение 11932.jpg (282x158)</h2>
+	<h3>Код</h3>
+{% highlight css %}
+#sata-image-example {
+	@include sata-image("11932.jpg");
+}
+{% endhighlight %}
+	<h3>Результат</h3>
+{% highlight css %}
+#sata-image-example {
+	background: url('/assets/img/11932.jpg?1365412404');
+	width: 282px;
+	height: 158px;
+}
+{% endhighlight %}
+	<div id="sata-image-example"></div>
+</div>

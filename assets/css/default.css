@@ -1,0 +1,20 @@
+/* line 3, ../sass/default.scss */
+#header nav {
+  max-width: 750px;
+}
+
+/* line 7, ../sass/default.scss */
+#header nav li.title {
+  margin-left: 20px;
+}
+
+/* line 11, ../sass/default.scss */
+#header .fork {
+  margin-right: 10px;
+}
+@media print, screen and (max-width: 725px) {
+  /* line 11, ../sass/default.scss */
+  #header .fork {
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+---
+layout: docs-item
+lang: ru
+title:  "sata-inline-list"
+syntax: "sata-inline-list($font-size, $min-height:false, $outer-width: false, $inner-width: false, $element-width: false, $element-margin: false, $count-in-row: false)"
+excerpt: "<p>Список элементов (inline). Некоторые параметры могут быть вычислены автоматически. Для элементов с плавающей высотой.</p>"
+related:
+  en: /en/docs/lists/sata-inline-list.html
+  ru: /ru/docs/lists/sata-inline-list.html
+---
+<div class="docs-item">
+<p class="syntax">
+	{{page.syntax}}
+</p>
+{{page.excerpt}}
+<p>
+	$font-size - должно быть указано, потому что font-size контейнера устанавливается в 0
+	<br/>
+	$min-height - минимальная высота элемента
+	<br/>
+	для других параметров и рассчёта размеров смотри <a href="/ru/docs/lists/sata-list.html" title="sata-list">sata-list</a>
+</p>
+<h1>Html разметка</h1>
+{% highlight html %}
+<div class="outer-list">
+	<ul class="inner-list">
+		...
+		<li class="element"></li>
+		...
+	</ul>
+</div>
+{% endhighlight %}
+</p>
+<h1>Примеры</h1>
+<h2>$element-width, $element-margin and $count-in-row</h2>
+<h3>Код</h3>
+{% highlight css %}
+#sata-inline-list-example {
+	@include sata-inline-list($font-size: 18px, $min-height: 50px, $outer-width: 1000px, $element-width: 200px, $element-margin: 25px);
+}
+{% endhighlight %}
+<h3>Результат</h3>
+{% highlight css %}
+#sata-inline-list-example {
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	letter-spacing: -1px;
+	width: 800px;
+}
+
+#sata-inline-list-example > ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	*zoom: 1;
+}
+
+#sata-inline-list-example > ul:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#sata-inline-list-example > ul > li {
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 0;
+	min-height: 50px;
+	_height: 50px;
+	font-size: 18px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+#sata-inline-list-example > ul {
+	width: 850px;
+	margin-left: -25px;
+}
+
+#sata-inline-list-example > ul > li {
+	width: 200px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#sata-inline-list-example li {
+	background-color: greenyellow;
+	margin: 10px;
+}
+{% endhighlight %}
+<div id="sata-inline-list-example">
+	<ul>
+		<li>some text</li>
+		<li>some text some text some text some text some text some text some text</li>
+		<li>some text</li>
+		<li>some text</li>
+		<li></li>
+		<li></li>
+		<li>some text</li>
+	</ul>
+</div>
+</div>

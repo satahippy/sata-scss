@@ -1,0 +1,208 @@
+/* line 4, ../sass/examples.scss */
+#sata-image-example {
+  background: url('/assets/img/11932.jpg?1365412404');
+  width: 282px;
+  height: 158px;
+}
+
+/* line 8, ../sass/examples.scss */
+.sata-gradient-example {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+}
+
+/* line 14, ../sass/examples.scss */
+#sata-gradient-example1 {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #24909d), color-stop(100%, #520000));
+  background-image: -webkit-linear-gradient(top, #24909d, #520000);
+  background-image: -moz-linear-gradient(top, #24909d, #520000);
+  background-image: -o-linear-gradient(top, #24909d, #520000);
+  background-image: linear-gradient(top, #24909d, #520000);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF24909D', endColorstr='#FF520000');
+}
+
+/* line 18, ../sass/examples.scss */
+#sata-gradient-example2 {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #24909d), color-stop(100%, #520000));
+  background-image: -webkit-linear-gradient(left, #24909d, #520000);
+  background-image: -moz-linear-gradient(left, #24909d, #520000);
+  background-image: -o-linear-gradient(left, #24909d, #520000);
+  background-image: linear-gradient(left, #24909d, #520000);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF24909D', endColorstr='#FF520000');
+}
+
+/* line 22, ../sass/examples.scss */
+.sata-list-example li {
+  height: 50px;
+  background-color: greenyellow;
+  margin: 10px;
+}
+
+/* line 28, ../sass/examples.scss */
+#sata-list-example1 {
+  overflow: hidden;
+  width: 360px;
+}
+/* line 52, ../other/sata-scss/_lists.scss */
+#sata-list-example1 > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  *zoom: 1;
+}
+/* line 38, C:/Ruby/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#sata-list-example1 > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 55, ../other/sata-scss/_lists.scss */
+#sata-list-example1 > ul > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+}
+/* line 39, ../other/sata-scss/_lists.scss */
+#sata-list-example1 > ul {
+  width: 390px;
+  margin-left: -15px;
+}
+/* line 42, ../other/sata-scss/_lists.scss */
+#sata-list-example1 > ul > li {
+  width: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* line 32, ../sass/examples.scss */
+#sata-list-example2 {
+  overflow: hidden;
+  width: 500px;
+}
+/* line 52, ../other/sata-scss/_lists.scss */
+#sata-list-example2 > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  *zoom: 1;
+}
+/* line 38, C:/Ruby/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#sata-list-example2 > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 55, ../other/sata-scss/_lists.scss */
+#sata-list-example2 > ul > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+}
+/* line 39, ../other/sata-scss/_lists.scss */
+#sata-list-example2 > ul {
+  width: 530px;
+  margin-left: -15px;
+}
+/* line 42, ../other/sata-scss/_lists.scss */
+#sata-list-example2 > ul > li {
+  width: 102px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* line 36, ../sass/examples.scss */
+#sata-list-example3 {
+  overflow: hidden;
+  width: 600px;
+}
+/* line 52, ../other/sata-scss/_lists.scss */
+#sata-list-example3 > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  *zoom: 1;
+}
+/* line 38, C:/Ruby/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#sata-list-example3 > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 55, ../other/sata-scss/_lists.scss */
+#sata-list-example3 > ul > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+}
+/* line 39, ../other/sata-scss/_lists.scss */
+#sata-list-example3 > ul {
+  width: 674px;
+  margin-left: -37px;
+}
+/* line 42, ../other/sata-scss/_lists.scss */
+#sata-list-example3 > ul > li {
+  width: 150px;
+  margin-left: 37px;
+  margin-right: 37px;
+}
+
+/* line 40, ../sass/examples.scss */
+#sata-inline-list-example {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -1px;
+  width: 800px;
+}
+/* line 68, ../other/sata-scss/_lists.scss */
+#sata-inline-list-example > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  *zoom: 1;
+}
+/* line 38, C:/Ruby/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#sata-inline-list-example > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 71, ../other/sata-scss/_lists.scss */
+#sata-inline-list-example > ul > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  min-height: 50px;
+  _height: 50px;
+  font-size: 18px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  line-height: normal;
+  letter-spacing: normal;
+}
+/* line 39, ../other/sata-scss/_lists.scss */
+#sata-inline-list-example > ul {
+  width: 850px;
+  margin-left: -25px;
+}
+/* line 42, ../other/sata-scss/_lists.scss */
+#sata-inline-list-example > ul > li {
+  width: 200px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+/* line 42, ../sass/examples.scss */
+#sata-inline-list-example li {
+  background-color: greenyellow;
+  margin: 10px;
+  color: #000000;
+}

@@ -1,0 +1,16 @@
+@import "compass";
+
+#header nav {
+  max-width: 750px;
+}
+
+#header nav li.title {
+  margin-left: 20px;
+}
+
+#header .fork {
+  @media print, screen and (max-width: 725px) {
+    display: none;
+  }
+  margin-right: 10px;
+}

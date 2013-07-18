@@ -1,0 +1,7 @@
+<li>
+	{% if post.id == page.id%}
+		<span>{{post.title}}</span>
+	{% else %}
+		<a href="{{site.baseurl}}{{ post.url }}" title="{{post.title}}">{{post.title}}</a>
+	{% endif %}
+</li>

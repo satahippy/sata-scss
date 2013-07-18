@@ -1,0 +1,38 @@
+---
+layout: docs-item
+lang: en
+title:  "sata-image"
+syntax: "sata-image($image, $display: false)"
+excerpt: "<p>Set background and width/height property of container.</p>"
+related:
+  en: /en/docs/utils/sata-image.html
+  ru: /ru/docs/utils/sata-image.html
+---
+<div class="docs-item">
+	<p class="syntax">
+		{{page.syntax}}
+	</p>
+	{{page.excerpt}}
+	<p>
+		$image - url of image
+		<br/>
+		$display - display css property (if it false, not set display property)
+	</p>
+	<h1>Examples</h1>
+	<h2>Show image 11932.jpg (282x158)</h2>
+	<h3>Source</h3>
+{% highlight css %}
+#sata-image-example {
+	@include sata-image("11932.jpg");
+}
+{% endhighlight %}
+	<h3>Result</h3>
+{% highlight css %}
+#sata-image-example {
+	background: url('/assets/img/11932.jpg?1365412404');
+	width: 282px;
+	height: 158px;
+}
+{% endhighlight %}
+	<div id="sata-image-example"></div>
+</div>

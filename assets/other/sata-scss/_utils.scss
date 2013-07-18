@@ -1,0 +1,16 @@
+// image with width & height
+@mixin sata-image($image, $display: false) {
+  @if $display {
+    display: $display;
+  }
+  @include background(image-url($image));
+  width: image-width($image);
+  height: image-height($image);
+}
+
+// cross browser gradient (only 2 colors)
+@mixin sata-cross-gradient($start-color, $end-color, $orientation: vertical) {
+  $orientation-modern: if($orientation == vertical, top, left);
+  @include background-image(linear-gradient($orientation-modern, color-stops($start-color, $end-color)));
+  @include filter-gradient($start-color, $end-color, $orientation);
+}

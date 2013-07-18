@@ -1,0 +1,47 @@
+@import "compass";
+@import "../other/sata-scss/all";
+
+#sata-image-example {
+   @include sata-image("11932.jpg");
+}
+
+.sata-gradient-example {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+}
+
+#sata-gradient-example1 {
+  @include sata-cross-gradient(#24909d, #520000);
+}
+
+#sata-gradient-example2 {
+  @include sata-cross-gradient(#24909d, #520000, horizontal);
+}
+
+.sata-list-example li {
+  height: 50px;
+  background-color: greenyellow;
+  margin: 10px;
+}
+
+#sata-list-example1 {
+  @include sata-list($element-width: 100px, $count-in-row: 3, $element-margin: 15px);
+}
+
+#sata-list-example2 {
+  @include sata-list($outer-width: 500px, $count-in-row: 4, $element-margin: 15px);
+}
+
+#sata-list-example3 {
+  @include sata-list($outer-width: 600px, $count-in-row: 3, $element-width: 150px);
+}
+
+#sata-inline-list-example {
+  @include sata-inline-list($font-size: 18px, $min-height: 50px, $outer-width: 800px, $element-width: 200px, $element-margin: 25px);
+  li {
+    background-color: greenyellow;
+    margin: 10px;
+    color: #000000;
+  }
+}

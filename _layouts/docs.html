@@ -1,0 +1,15 @@
+---
+layout: base
+---
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/default.css">
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/docs.css">
+<section>
+	<div class="docs-index">
+		{% include docs_index.html %}
+	</div>
+	<div class="docs-content">
+		{{ content }}
+		{% include docs_items.html %}
+	</div>
+	<div style="clear: both;"></div>
+</section>

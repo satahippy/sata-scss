@@ -1,0 +1,29 @@
+<div id="header">
+	<nav>
+		<li class="fork"><a href="https://github.com/satahippy/sata-scss">View On GitHub</a></li>
+		<li class="fork"><a href="{{site.baseurl}}/{{page.lang}}/docs">Docs</a></li>
+		{% if page.lang == 'en' %}
+		<li class="fork"><a href="{{site.baseurl}}/">About</a></li>
+		{% else %}
+		<li class="fork"><a href="{{site.baseurl}}/{{page.lang}}">About</a></li>
+		{% endif %}
+
+		{% if page.related.en %}
+		<li class="downloads"><a href="{{site.baseurl}}{{page.related.en}}">ENG</a></li>
+		{% else %}
+		<li class="downloads"><a href="{{site.baseurl}}/">ENG</a></li>
+		{% endif %}
+
+		{% if page.related.ru %}
+		<li class="downloads"><a href="{{site.baseurl}}{{page.related.ru}}">RUS</a></li>
+		{% else %}
+		<li class="downloads"><a href="{{site.baseurl}}/ru">RUS</a></li>
+		{% endif %}
+
+		<li class="title">LANGUAGES</li>
+
+		<li class="downloads"><a href="https://github.com/satahippy/sata-scss/zipball/master">ZIP</a></li>
+		<li class="downloads"><a href="https://github.com/satahippy/sata-scss/tarball/master">TAR</a></li>
+		<li class="title">DOWNLOADS</li>
+	</nav>
+</div>
