@@ -14,3 +14,12 @@
   @include background-image(linear-gradient($orientation-modern, color-stops($start-color, $end-color)));
   @include filter-gradient($start-color, $end-color, $orientation);
 }
+
+// font-face
+@mixin sata-font-face($name, $locals, $font-files, $eot: false, $weight: false, $style: false) {
+  @each $local in $locals {
+    $font-files: local(quote($local)), $font-files;
+  }
+  $font-files: local('☺'), $font-files;
+  @include font-face($name, $font-files, $eot, $weight, $style);
+}
